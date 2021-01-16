@@ -29,7 +29,7 @@ SECRET_KEY = 'aad&xz-o7sjgtt@0k5n+bbzo=j^$$k5%-udds)-bv8nqi*2-u7+(e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://nuxt-app-test.herokuapp.com/']
 
 
 # Application definition
