@@ -5,6 +5,11 @@ from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseU
 
 class CustomAccountManager(BaseUserManager):
     def create_user(self, login,  password, **other_fields):
+        if not login:
+            raise ValueError('Login is required')
+        if not password:
+            raise ValueError('Password is required')
+
         user = self.model(login=login,
                           ** other_fields)
         user.set_password(password)
